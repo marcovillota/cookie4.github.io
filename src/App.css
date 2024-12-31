@@ -1,0 +1,73 @@
+.wrapper{
+  min-height: 100dvh;
+  background-repeat: no-repeat;
+}
+.container{
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+}
+
+.title{
+  text-align: center;
+  color: antiquewhite;
+  text-shadow: 3px 3px 1px black;
+}
+.card__body{
+  background-repeat: no-repeat;
+  background-size:cover;
+  place-content: center;
+  display: grid;
+ 
+}
+
+.card__galleta{
+  animation: temblor 0.5s infinite;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  height: 250px;
+  width: 600px;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.card__galleta .text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(20, 19, 19); 
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card__btn {
+
+  text-align: center;
+  color: antiquewhite;
+  display: inline-block;
+  padding: 20px 20px;
+  font-size: 16px; 
+  background-color: #ff7b00; 
+  border: none; 
+  border-radius: 50px; 
+  cursor: pointer; 
+}
+@keyframes temblor {
+  0% { transform: translate(0); }
+  25% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  75% { transform: translate(-1px, 1px); }
+  100% { transform: translate(0); }
+}
+
+
+/* Para detener la animación al pasar el mouse */
+.card__galleta:hover {
+  animation-play-state: paused;
+}
